@@ -1,0 +1,152 @@
+.s-area-slide-hero {
+  position: relative;
+  width: 100%;
+  height: 99.4rem;
+  .slide-hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .main-area {
+      background: url("../img/bg-blue.svg");
+      width: 100%;
+      height: 70.6rem;
+      background-size: cover;
+      padding-top: 13.5rem;
+      .text {
+        .tag {
+          margin: 0 auto;
+        }
+        h1 {
+          text-align: center;
+          margin-bottom: 0.8rem;
+          margin-top: 2.9rem;
+        }
+        p {
+          text-align: center;
+          font-weight: 500;
+          color: #f1f1f1;
+        }
+        .image {
+          margin: 0 auto;
+          margin-top: 15.2rem;
+          width: 100%;
+          max-width: 79.8rem;
+          position: relative;
+          z-index: 1;
+          .lights {
+            position: absolute;
+            left: 50%;
+            margin-left: -8.5rem;
+            top: -4.9rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    overflow: hidden;
+    height: 95.4rem;
+    .slide-hero {
+      .swiper-slide {
+        &:after {
+          height: 25rem;
+        }
+        .main-area {
+          .text {
+            h1{
+                max-width: 58.2rem;
+                margin: 0 auto;
+                margin-top: 2.9rem;
+                margin-bottom: 0.8rem
+            }
+            .image {
+              margin-top: 8.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 560px) {
+    overflow: hidden;
+    height: 104.5rem;
+    .slide-hreo{
+         
+        .swiper-slide{
+            .main-area{
+                padding-top: 12rem;
+                h1{
+                    font-size: 4.8rem;
+                    line-height: 6rem;
+                }
+        
+                .image{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        max-width: 75rem;
+                    }
+
+                }
+            }
+        }
+    }
+  
+  }
+}
+.s-all-info-pokemons {
+  padding-top: 11.9rem;
+  position: relative;
+  margin-top: -28.8rem;
+  z-index: 2;
+  .top {
+    @include centerTotalFlex;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    .search {
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+      background-color: #f0f0f0;
+    }
+  }
+  .area-all {
+    display: flex;
+
+    .left-container {
+      width: 100%;
+      max-width: 23.9rem;
+      border-radius: 1px solid #eff3f6;
+      padding-top: 7.1rem;
+      ul {
+        li {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+    .right-container {
+      width: 100%;
+      padding-top: 7.1rem;
+      padding-left: 7.5rem;
+      padding-bottom: 7.5rem;
+      .top-container {
+        & > div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          gap: 1rem;
+          font-weight: bold;
+        }
+      }
+      .all {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 1.9rem;
+        margin-bottom: 6.8rem;
+      }
+      .btn-load-more {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+  }
+}

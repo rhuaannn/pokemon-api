@@ -1,0 +1,741 @@
+.tag {
+  display: flex;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 24.4rem;
+  max-width: 12.1rem;
+  padding: 0.6rem 0.4rem;
+  &.blue-tag {
+    .icon {
+      background-color: rgba(63, 104, 186, 0.164);
+    }
+    span {
+      color: #3f67ba;
+    }
+  }
+  .icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color: rgba(194, 0, 0, 0.12);
+    border-radius: 50%;
+    @include centerTotalFlex();
+    margin-right: 0.8rem;
+  }
+  span {
+    font-weight: 600;
+    font-size: 15px;
+    color: #c20001;
+  }
+}
+.search {
+  background-color: #ffff;
+  border-radius: 12.2rem;
+  width: 100%;
+  max-width: 40.3rem;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+  padding-right: 0.7rem;
+  input[type="text"] {
+    border: 0;
+    outline: none;
+    width: 80%;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color:black;
+    &::placeholder {
+      color: #a0afba;
+    }
+  }
+  button {
+    width: 4.2rem;
+    height: 4.2rem;
+    background-color: rgba(158, 185, 255, 0.1);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+    &:hover {
+      border-color: #3f67ba;
+    }
+    @include centerTotalFlex();
+  }
+}
+.type-filter {
+  display: flex;
+  align-items: center;
+
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.3s;
+  &:hover,
+  &.active {
+    opacity: 1;
+    filter: grayscale(0%);
+  }
+
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    @include centerTotalFlex();
+    margin-right: 0.5rem;
+  }
+  span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+  }
+  &.ghost {
+    span {
+      color: #616eb7;
+    }
+  }
+  &.bug {
+    span {
+      color: #9bba48;
+    }
+  }
+  &.dark {
+    span {
+      color: #595761;
+    }
+  }
+  &.dragon {
+    span {
+      color: #2c6ac1;
+    }
+  }
+  &.electric {
+    span {
+      color: #51c555;
+    }
+  }
+  &.fairy {
+    span {
+      color: #216d20;
+    }
+  }
+  &.fighting {
+    span {
+      color: #cc532a;
+    }
+  }
+  &.ground {
+    span {
+      color: #c11ac7;
+    }
+  }
+  &.ice {
+    span {
+      color: #010c47;
+    }
+  }
+  &.normal {
+    span {
+      color: #c5333c;
+    }
+  }
+  &.poison {
+    span {
+      color: #21fea7;
+    }
+  }
+  &.psychic {
+    span {
+      color: rgb(154, 205, 50);
+    }
+  }
+  &.grass {
+    span {
+      color: #73b861;
+    }
+  }
+  &.steel {
+    span {
+      color: #67833a;
+    }
+  }
+  &.water {
+    span {
+      color: #550548;
+    }
+  }
+  &.fire {
+    span {
+      color: #a72c0d;
+    }
+  }
+  &.flying {
+    span {
+      color: #680758;
+    }
+  }
+}
+.card-pokemon {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 28rem;
+  height: 30.4rem;
+  background-color: #ffff;
+  border-radius: 1.2rem;
+  box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.3);
+  }
+  &.grass {
+    .image {
+      &:after {
+        background-color: rgba(114, 184, 97, 0.5);
+      }
+    }
+  }
+  &.bug {
+    .image {
+      &:after {
+        background-color: rgba(156, 186, 72, 0.493);
+      }
+    }
+  }
+  &.dark {
+    .image {
+      &:after {
+        background-color: rgba(89, 87, 97, 0.411);
+      }
+    }
+  }
+  &.dragon {
+    .image {
+      &:after {
+        background-color: rgba(44, 106, 193, 0.411);
+      }
+    }
+  }
+  &.electric {
+    .image {
+      &:after {
+        background-color: rgba(81, 197, 85, 0.295);
+      }
+    }
+  }
+  &.fairy {
+    .image {
+      &:after {
+        background-color: rgba(33, 109, 32, 0.267);
+      }
+    }
+  }
+  &.fighting {
+    .image {
+      &:after {
+        background-color: rgba(204, 83, 42, 0.288);
+      }
+    }
+  }
+  &.ground {
+    .image {
+      &:after {
+        background-color: rgba(193, 26, 199, 0.384);
+      }
+    }
+  }
+  &.ice {
+    .image {
+      &:after {
+        background-color: rgba(1, 11, 71, 0.315);
+      }
+    }
+  }
+  &.normal {
+    .image {
+      &:after {
+        background-color: rgba(197, 51, 61, 0.295);
+      }
+    }
+  }
+  &.poison {
+    .image {
+      &:after {
+        background-color: rgba(114, 184, 97, 0.5);
+      }
+    }
+  }
+  &.psychic {
+    .image {
+      &:after {
+        background-color: rgba(153, 205, 50, 0.247);
+      }
+    }
+  }
+  &.steel {
+    .image {
+      &:after {
+        background-color: rgba(114, 184, 97, 0.212);
+      }
+    }
+  }
+  &.water {
+    .image {
+      &:after {
+        background-color: rgba(114, 184, 97, 0.5);
+      }
+    }
+  }
+  &.fire {
+    .image {
+      &:after {
+        background-color: rgba(104, 7, 88, 0.295);
+      }
+    }
+  }
+  &.flying {
+    .image {
+      &:after {
+        background-color: rgba(104, 7, 88, 0.212);
+      }
+    }
+  }
+
+  .image {
+    width: 200px;
+    height: 200px;
+    @include centerTotalFlex;
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
+    &:after {
+      content: "";
+      width: 16.5rem;
+      height: 16.5rem;
+      z-index: -1;
+      position: absolute;
+      border-radius: 50%;
+    }
+  }
+  .info {
+    display: flex;
+    width: 100%;
+    align-items: end;
+    justify-content: space-between;
+    padding: 0rem 2.8rem;
+    .text {
+      span {
+        text-align: left;
+        display: block;
+        font-size: 1.3rem;
+        line-height: 150%;
+        margin-bottom: 6px;
+        color: #7a7d80;
+        font-weight: 500;
+      }
+    }
+    .icon {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.tag-type {
+  display: inline-block;
+  padding: 0.2rem;
+  line-height: 2.4rem;
+  border-radius: 0.2rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  font-family: "Montserrat", sans-serif;
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.151);
+  }
+  &.dark {
+    color: #595761;
+    background-color: rgba(89, 87, 97, 0.171);
+  }
+  &.dragon {
+    color: #2c6ac1;
+    background-color: rgba(44, 106, 193, 0.151);
+  }
+  &.electric {
+    color: #d4bc34;
+    background-color: rgba(212, 188, 52, 0.151);
+  }
+  &.fairy {
+    color: #e296e1;
+    background-color: rgba(226, 150, 225, 0.151);
+  }
+  &.fighting {
+    color: #c44d61;
+    background-color: rgba(196, 77, 97, 0.151);
+  }
+  &.ground {
+    color: #ce8056;
+    background-color: rgba(206, 128, 86, 0.151);
+  }
+  &.ice {
+    color: #71baac;
+    background-color: rgba(113, 186, 171, 0.151);
+  }
+  &.normal {
+    color: #909090;
+    background-color: rgba(144, 144, 144, 0.151);
+  }
+  &.poison {
+    color: #ac6aca;
+    background-color: rgba(172, 106, 202, 0.151);
+  }
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.151);
+  }
+  &.psychic {
+    color: #eb8b85;
+    background-color: rgba(235, 106, 202, 0.151);
+  }
+  &.rock {
+    color: #84beb3;
+    background-color: rgba(132, 190, 179, 0.151);
+  }
+  &.ghost {
+    color: #616eb7;
+    background-color: rgba(97, 110, 183, 0.151);
+  }
+  &.grass {
+    color: #73b861;
+    background-color: rgba(114, 184, 97, 0.151);
+  }
+  &.steel {
+    color: #550548;
+    background-color: rgba(85, 5, 72, 0.233);
+  }
+  &.water {
+    color: #6594a1;
+    background-color: rgba(101, 148, 97, 0.151);
+  }
+  &.fire {
+    color: #a72c0d;
+    background-color: rgba(167, 44, 13, 0.247);
+  }
+  &.flying {
+    color: #680758;
+    background-color: rgba(104, 7, 88, 0.397);
+  }
+}
+.btn-load-more {
+  background-color: rgba(63, 93, 179, 0.1);
+  border-radius: 0.6rem;
+  letter-spacing: -0.01;
+  padding: 1.4rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3f5db3;
+  transition: all 0.3s;
+  &:hover {
+    background-color: rgba(40, 142, 201, 0.788);
+     color: white;
+}}
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+  @include centerTotalFlex();
+  &[typePokemonModal="grass"] {
+    .left-container {
+      background-image: url("../img/bg-types/grass.svg");
+    }
+  }
+  &[typePokemonModal="poison"] {
+    .left-container {
+      background-image: url("../img/bg-types/poison.svg");
+    }
+  }
+  &[typePokemonModal="bug"] {
+    .left-container {
+      background-image: url("../img/bg-types/bug.svg");
+    }
+  }
+  &[typePokemonModal="dark"] {
+    .left-container {
+      background-image: url("../img/bg-types/dark.svg");
+    }
+  }
+  &[typePokemonModal="dragon"] {
+    .left-container {
+      background-image: url("../img/bg-types/dragon.svg");
+    }
+  }
+  &[typePokemonModal="electric"] {
+    .left-container {
+      background-image: url("../img/bg-types/electric.svg");
+    }
+  }
+  &[typePokemonModal="fairy"] {
+    .left-container {
+      background-image: url("../img/bg-types/fairy.svg");
+    }
+  }
+  &[typePokemonModal="fighting"] {
+    .left-container {
+      background-image: url("../img/bg-types/fighting.svg");
+    }
+  }
+  &[typePokemonModal="ground"] {
+    .left-container {
+      background-image: url("../img/bg-types/ground.svg");
+    }
+  }
+  &[typePokemonModal="ice"] {
+    .left-container {
+      background-image: url("../img/bg-types/ice.svg");
+    }
+  }
+  &[typePokemonModal="normal"] {
+    .left-container {
+      background-image: url("../img/bg-types/normal.svg");
+    }
+  }
+  &[typePokemonModal="psychic"] {
+    .left-container {
+      background-image: url("../img/bg-types/psychic.svg");
+    }
+  }
+  &[typePokemonModal="rock"] {
+    .left-container {
+      background-image: url("../img/bg-types/rock.svg");
+    }
+  }
+  &[typePokemonModal="ghost"] {
+    .left-container {
+      background-image: url("../img/bg-types/ghost.svg");
+    }
+  }
+  &[typePokemonModal="steel"] {
+    .left-container {
+      background-image: url("../img/bg-types/steel.svg");
+    }
+  }
+  &[typePokemonModal="flying"] {
+    .left-container {
+      background-image: url("../img/bg-types/flying.svg");
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+  }
+  .box {
+    display: flex;
+    width: 100%;
+    max-width: 71rem;
+    height: 50.8rem;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    border-radius: 1.6rem;
+    box-shadow: 0rem 1rem 4rem rgba(13, 12, 71, 0.5);
+
+    .close {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      width: 3.6rem;
+      height: 3.6rem;
+      background-color: #f0f0ff;
+      border-radius: 0.8rem;
+      transition: all 0.3s;
+      @include centerTotalFlex();
+      &:hover {
+        width: 3.8rem;
+        height: 3.8rem;
+      }
+    }
+    .left-container {
+      position: relative;
+      width: 100%;
+      max-width: 19.1rem;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      .icon {
+        top: 2rem;
+        right: 2rem;
+        position: absolute;
+        width: 3.4rem;
+        height: 3.4rem;
+        background-color: #ffff;
+        border-radius: 50%;
+        @include centerTotalFlex();
+      }
+      .image {
+        max-width: 20.2rem;
+        left: 1.4rem;
+        bottom: 13.1rem;
+        position: absolute;
+        margin-left: 1.5rem;
+      }
+    }
+    .rigth-container {
+      padding: 3.5rem 7.2rem 2.9rem 7.4rem;
+      .name {
+        display: flex;
+        align-items: flex-end;
+        h2 {
+          font-family: "Montserrat", sans-serif;
+          font-size: 2.8rem;
+          line-height: 3.4rem;
+          letter-spacing: -0.01em;
+          color: #2f3133;
+          font-weight: bold;
+        }
+        span {
+          font-family: "Montserrat", sans-serif;
+          font-size: 1.6rem;
+          position: relative;
+          top: -0.3rem;
+          margin-left: 0.8rem;
+          line-height: 2rem;
+          letter-spacing: -0.01em;
+          color: #2f3133;
+          font-weight: bold;
+        }
+      }
+      .type {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-bottom: 3.2rem;
+
+        li {
+          &:not(:first-child) {
+            margin-left: 1rem;
+          }
+        }
+      }
+      .info {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 3.2rem;
+        li {
+          &:not(:first-child) {
+            margin-left: 4.8rem;
+          }
+          span {
+            display: block;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            letter-spacing: -0.01em;
+            color: #7a7d80;
+            margin-bottom: 0.4rem;
+          }
+          strong {
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+          }
+        }
+      }
+      .weak {
+        margin-bottom: 4.8rem;
+        h4 {
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          color: #4d5053;
+          margin-bottom: 1.6rem;
+          line-height: 1.6rem;
+        }
+        ul {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100%;
+          li {
+            &:not(:first-child) {
+              margin-left: 1rem;
+            }
+          }
+        }
+      }
+      .stats {
+        h5 {
+          font-weight: 600;
+          font-size: 1.3rem;
+          line-height: 1.6rem;
+          letter-spacing: -0.01em;
+          color: #4d5053;
+          margin-bottom: 1.6rem;
+        }
+        .all {
+          .item {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+              margin-bottom: 1.3rem;
+            }
+            span {
+              display: block;
+              width: 6.8rem;
+              font-size: 1.2rem;
+              line-height: 1.5rem;
+              color: #7a7d80;
+            }
+            .bar-status {
+              position: relative;
+              width: 100%;
+              max-width: 28.3rem;
+              height: 0.3rem;
+              margin-left: 50px;
+              background-color: #eff3f6;
+              .bar {
+                position: absolute;
+                width: 56%;
+                height: 100%;
+                top: 0;
+                left: 10px;
+                background-color: rgb(131, 9, 9);
+                z-index: 0;
+              }
+              .separator {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                li {
+                  width: 0.4rem;
+                  height: 0.3rem;
+                  background-color: #fff;
+                  &:not(:first-child){
+                    margin-left: 5.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.open-modal{
+    .modal{
+        opacity: 1;
+        pointer-events: all;
+      
+    }
+}

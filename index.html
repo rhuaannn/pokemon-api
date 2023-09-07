@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+    <link rel="stylesheet" href="css/main.css" />
+  
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="" class="logo">
+          <img src="img/logo.svg" alt="" />
+        </a>
+        <p>Case Study</p>
+      </div>
+    </header>
+
+    <section class="s-area-slide-hero">
+      <div class="slide-hero">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="main-area">
+              <div class="container">
+                <div class="text">
+                  <div class="tag">
+                    <div class="icon">
+                      <img src="img/bag-red.svg" alt="" />
+                    </div>
+                    <span>pokedex</span>
+                  </div>
+                  <h1>Who is that Pokémon?</h1>
+                  <p>
+                    The perfect guide for those who want to hunt POKÉMON around
+                    the world
+                  </p>
+                  <div class="image">
+                    <img src="img/lighting.svg" class="lights" alt="" />
+                    <img src="img/pokeball-blue.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s-all-info-pokemons">
+      <div class="container">
+        <div class="top">
+          <h2>Select your pokémon</h2>
+          <div class="search">
+            <input type="text" placeholder="Search name or code" />
+            <button type="button">
+              <img src="img/icon-search.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="area-all">
+          <div class="left-container">
+            <ul>
+              <li>
+                <button class="type-filter grass active">
+                  <div class="icon">
+                    <img src="img/icon-types/grass.svg" alt="" />
+                  </div>
+                  <span>Fighting</span>
+                </button>
+              </li>
+            </ul>
+    
+            <ul>
+              <li>
+                <button class="type-filter fighting  ">
+                  <div class="icon">
+                    <img src="img/icon-types/fighting.svg" alt="" />
+                  </div>
+                  <span>FIRE</span>
+                </button>
+              </li>
+            </ul>
+       
+            <ul>
+              <li>
+                <button class="type-filter fire  ">
+                  <div class="icon">
+                    <img src="img/icon-types/fire.svg" alt="" />
+                  </div>
+                  <span>GRASS</span>
+                </button>
+              </li>
+            </ul>
+         
+          </div>
+          <div class="right-container">
+            <div class="top-container">
+              <div>
+                <img src="img/icon-pokeball.svg" alt="">
+                <span><strong id="js-count-pokemons">150 Pokémons</strong></span>
+              </div>
+            </div>
+            <div class="all">
+              <button class="card-pokemon  js-open-details-pokemon grass">
+                <div class="image">
+                  <img src="img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="text">
+                    <span>#001</span>
+                    <h3>bulbasaur</h3>
+                  </div>
+                  <div class="icon">
+                    <img src="img/icon-types/grass.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button class="card-pokemon  js-open-details-pokemon grass">
+                <div class="image">
+                  <img src="img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="text">
+                    <span>#001</span>
+                    <h3>bulbasaur</h3>
+                  </div>
+                  <div class="icon">
+                    <img src="img/icon-types/grass.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+              <button class="card-pokemon  js-open-details-pokemon grass">
+                <div class="image">
+                  <img src="img/bulbasaur.svg" alt="" />
+                </div>
+                <div class="info">
+                  <div class="text">
+                    <span>#001</span>
+                    <h3>bulbasaur</h3>
+                  </div>
+                  <div class="icon">
+                    <img src="img/icon-types/grass.svg" alt="" />
+                  </div>
+                </div>
+              </button>
+            </div>
+            <button class="btn-load-more">Load more Pokémons</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <h3>Pokémon API</h3>
+        <a href="https://byrhuanmarques.netlify.app" target="_blank">
+
+          <span>Desenvolvido por Rhuan Marques</span>
+        </a>
+      </div>
+    </footer>
+
+    <div class="modal" typePokemonModal="grass">
+      <div class="overlay"></div>
+      <div class="box">
+        <button class="close js-close-details-pokemon">
+          <img src="img/close.svg" alt="" class="js-close-details-pokemon"/>
+        </button>
+        <div class="left-container">
+          <div class="icon">
+            <img src="img/icon-types/grass.svg" alt="" />
+          </div>
+          <div class="image">
+            <img src="img/bulbasaur.svg" alt="" />
+          </div>
+        </div>
+        <div class="rigth-container">
+          <div class="name">
+            <h2>bulbasaur</h2>
+            <span>#001</span>
+          </div>
+          <ul class="type">
+            <li>
+              <span class="tag-type grass">Grass</span>
+            </li>
+            <li>
+              <span class="tag-type poison">Poison</span>
+            </li>
+          </ul>
+          <ul class="info">
+            <li>
+              <span>Heigth</span>
+              <strong>0.7</strong>
+            </li>
+            <li>
+              <span>Weigth</span>
+              <strong>0.7</strong>
+            </li>
+            <li>
+              <span>Abilities</span>
+              <strong>0.7</strong>
+            </li>
+          </ul>
+          <div class="weak">
+            <h4>Weaknesses</h4>
+            <ul>
+              <li>
+                <span class="tag-type ice">ice</span>
+              </li>
+              <li>
+                <span class="tag-type grass">Grass</span>
+              </li>
+              <li>
+                <span class="tag-type grass">Grass</span>
+              </li>
+              <li>
+                <span class="tag-type flying">flying</span>
+              </li>
+            </ul>
+          </div>
+          <div class="stats">
+            <h5>Stats</h5>
+            <div class="all">
+              <div class="item">
+                <span>HP</span>
+                <div class="bar-status">
+                  <div class="bar"></div>
+                  <ul class="separator">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <span>Attack</span>
+                <div class="bar-status">
+                  <div class="bar"></div>
+                  <ul class="separtor">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <span>Defense</span>
+                <div class="bar-status">
+                  <div class="bar"></div>
+                  <ul class="separtor">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <span>Sp.Attack</span>
+                <div class="bar-status">
+                  <div class="bar"></div>
+                  <ul class="separtor">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <span>Sp.Defense</span>
+                <div class="bar-status">
+                  <div class="bar"></div>
+                  <ul class="separtor">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <span>Speed</span>
+                <div class="bar-status">
+                  <div class="bar"></div>
+                  <ul class="separtor">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/plugins.js" defer></script>
+    <script src="js/all.js" defer></script>
+  </body>
+</html>
