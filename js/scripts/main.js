@@ -16,3 +16,14 @@ cardPokemon.forEach((card) => {
 removeModalCard.forEach((removeModalCard) => {
     removeModalCard.addEventListener("click", removeDetailsPokemon);
 })
+
+function listinggPokemons (url) {
+  axios({
+    method: "GET",
+    url: url
+  })
+  .then((response) =>{
+    console.log(response);  
+  })
+}
+listinggPokemons("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0")
