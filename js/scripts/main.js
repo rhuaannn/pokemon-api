@@ -152,3 +152,52 @@ function showMorePokemon() {
 }
 
 btnLoadMore.addEventListener("click", showMorePokemon);
+
+//funçao para filtrar os pokemon
+
+const searchPokemon = document.querySelector(".search-input-pokemon");
+const btnSearchPokemon = document.querySelector(".btn-search");
+btnSearchPokemon.addEventListener("click", searchPokemons);
+
+searchPokemon.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") {
+    searchPokemons();
+  }
+});
+function searchPokemons() {
+ 
+ 
+    const valueInput = searchPokemon.value.toLowerCase();
+
+    axios({
+      method: "GET",
+      url: `https://pokeapi.co/api/v2/pokemon/${valueInput}`,
+    })
+    .then((response) => {
+      const countPokemons = document.getElementById("js-count-pokemons");
+      listCard.innerHTML = "";
+  
+      countPokemons.textContent = 1;
+  
+      const { name, id, sprites, types } = response.data;
+  
+      const infoCard = {
+        name: name,
+        code: id,
+        image: sprites.other.dream_world.front_default,
+        type: types[0].type.name,
+      };
+      createCardPokemon(
+        infoCard.name,
+        infoCard.type,
+        infoCard.cpde,
+        infoCard.image
+      );
+  
+        
+    });  
+    searchPokemon.value = "";
+ 
+  
+
+} 
