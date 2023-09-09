@@ -457,6 +457,16 @@
   pointer-events: none;
   transition: all .3s;
   @include centerTotalFlex();
+  &[typePokemonModal="water"] {
+    .left-container {
+      background-image: url("../img/bg-types/water.svg");
+    }
+  }
+  &[typePokemonModal="fire"] {
+    .left-container {
+      background-image: url("../img/bg-types/fire.svg");
+    }
+  }
   &[typePokemonModal="grass"] {
     .left-container {
       background-image: url("../img/bg-types/grass.svg");
