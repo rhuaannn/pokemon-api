@@ -113,9 +113,8 @@ function openDetailsPokemon() {
   imgPokemonModal.setAttribute("src", imagePokemon.getAttribute("src"));
 
   const namePokemonModal = document.getElementById("js-name-pokemon-modal");
-  
 
-console.log(namePokemonModal)
+  const idPokemonModal = document.getElementById("js-id-pokemon-modal")
 
      axios({
      method: "GET",
@@ -124,6 +123,8 @@ console.log(namePokemonModal)
    .then(response =>{
     
      namePokemonModal.textContent = response.data.name
+     idPokemonModal.textContent = response.data.id < 100 ? `#0${response.data.id} ` : ` #${response.data.id}`
+    console.log(response.data.id)
    })
    
 }
